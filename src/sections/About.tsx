@@ -200,7 +200,7 @@ export default function About() {
               </div>
               <div className="glass p-4 rounded-xl">
                 <div className="text-[#2467ec] font-semibold">Email</div>
-                <div className="text-white/70">wajeeh@example.com</div>
+                <div className="text-white/70">clickora5@gmail.com</div>
               </div>
               <div className="glass p-4 rounded-xl">
                 <div className="text-[#2467ec] font-semibold">Location</div>
