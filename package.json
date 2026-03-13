@@ -6,7 +6,7 @@
  "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "vercel-build": "chmod +x node_modules/.bin/tsc && npm run build",
+    "vercel-build": "chmod -R +x node_modules/.bin/ && npx tsc -b && npx vite build",
     "lint": "eslint ."
   },
   "dependencies": {
