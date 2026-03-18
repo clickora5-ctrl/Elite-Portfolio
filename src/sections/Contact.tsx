@@ -101,16 +101,30 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+   const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const phoneNumber = "923718096565";
+
+  const text = `🚀 New Contact Form Message
+
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+💬 Message: ${formData.message}`;
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+  setTimeout(() => {
+    window.open(whatsappURL, "_blank");
 
     setIsSubmitting(false);
     setIsSubmitted(true);
     setFormData({ name: '', email: '', message: '' });
 
-    // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
-  };
+  }, 500);
+};
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
